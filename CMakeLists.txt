@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
 
-project(Superbuild_extern)
+project(SUPERBUILD_EXTERN)
 
 message("Hello from the external repository's CMakeLists.txt!")
 
