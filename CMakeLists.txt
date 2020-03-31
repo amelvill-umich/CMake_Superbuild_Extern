@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
 
+project(Superbuild_extern)
+
 message("Hello from the external repository's CMakeLists.txt!")
 
 # Set Properties->General->Configuration Type to Application(.exe)
