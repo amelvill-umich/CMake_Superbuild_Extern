@@ -10,6 +10,7 @@ message("Hello from the external repository's CMakeLists.txt!")
 add_executable (extern_binary extern.c)
 
 # Adds logic to INSTALL.vcproj to copy the compiled application to destination directory
-install (TARGETS extern_binary EXPORT extern_binary
+install (TARGETS extern_binary 
+        EXPORT extern_binary
         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Extern"
         )
