@@ -24,6 +24,7 @@ install(EXPORT extern_export_binary
 
 configure_file("${CMAKE_SOURCE_DIR}/SUPERBUILD_EXTERNConfig.cmake.in" SUPERBUILD_EXTERNConfig.cmake @ONLY)
 
+# the only mildly annoying thing about this is, it packages in these intermediate cmake files in with the installer
 # I think this is what makes sure the Config file is in SUPERBUILD_EXTERN_DIR
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/SUPERBUILD_EXTERNConfig.cmake"
         DESTINATION lib/cmake/Extern
