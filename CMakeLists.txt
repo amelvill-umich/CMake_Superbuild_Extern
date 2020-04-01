@@ -12,20 +12,7 @@ add_executable (extern_binary extern.c)
 # I'm pretty sure this is supposed to be in the extern, though the forum post kinda makes
 # it seem like this should be in the config file instead...?
 install (TARGETS extern_binary 
-        EXPORT extern_export_binary #NOTE: this statement must come before RUNTIME_DESTINATION!
         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Extern"
         )
 
-install(EXPORT extern_export_binary
-        FILE SUPERBUILD_EXTERNTargets.cmake
-        #NAMESPACE Extern:: # I'm going to drop the namespace in case maybe that's what it's struggling with?
-        DESTINATION lib/cmake/Extern
-)
-
 configure_file("${CMAKE_SOURCE_DIR}/SUPERBUILD_EXTERNConfig.cmake.in" SUPERBUILD_EXTERNConfig.cmake @ONLY)
-
-# the only mildly annoying thing about this is, it packages in these intermediate cmake files in with the installer
-# I think this is what makes sure the Config file is in SUPERBUILD_EXTERN_DIR
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/SUPERBUILD_EXTERNConfig.cmake"
-        DESTINATION lib/cmake/Extern
-)
