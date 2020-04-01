@@ -18,7 +18,7 @@ install (TARGETS extern_binary
 
 install(EXPORT extern_binary
         FILE SUPERBUILD_EXTERNTargets.cmake
-        NAMESPACE Extern::
+        #NAMESPACE Extern:: # I'm going to drop the namespace in case maybe that's what it's struggling with?
         DESTINATION lib/cmake/Extern
 )
 
