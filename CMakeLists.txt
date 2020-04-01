@@ -11,4 +11,5 @@ add_executable (extern_binary extern.c)
 
 # Adds logic to INSTALL.vcproj to copy the compiled application to destination directory
 install (TARGETS extern_binary
-         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Extern")
+         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Extern"
+         EXPORT extern_binary)
