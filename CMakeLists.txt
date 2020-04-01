@@ -15,3 +15,16 @@ install (TARGETS extern_binary
         EXPORT extern_binary #NOTE: this statement must come before RUNTIME_DESTINATION!
         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Extern"
         )
+
+install(EXPORT extern_binary
+        FILE DepTargets.cmake
+        NAMESPACE Extern::
+        DESTINATION lib/cmake/Extern
+)
+
+configure_file(${CMAKE_SOURCE_DIR}/cmake/SUPERBUILD_EXTERNConfig.cmake.in SUPERBUILD_EXTERNConfig.cmake @ONLY)
+
+# I think this is what makes sure the Config file is in SUPERBUILD_EXTERN_DIR
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/SUPERBUILD_EXTERNConfig.cmake"
+        DESTINATION lib/cmake/Extern
+)
