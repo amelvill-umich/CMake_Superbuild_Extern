@@ -12,7 +12,7 @@ add_executable (extern_binary extern.c)
 # I'm pretty sure this is supposed to be in the extern, though the forum post kinda makes
 # it seem like this should be in the config file instead...?
 install (TARGETS extern_binary 
-        EXPORT extern_binary #NOTE: this statement must come before RUNTIME_DESTINATION!
+        EXPORT extern_export_binary #NOTE: this statement must come before RUNTIME_DESTINATION!
         RUNTIME DESTINATION "DirectoryForCmakeSuperbuild_Extern"
         )
 
