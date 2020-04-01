@@ -17,7 +17,7 @@ install (TARGETS extern_binary
         )
 
 install(EXPORT extern_binary
-        FILE DepTargets.cmake
+        FILE SUPERBUILD_EXTERNTargets.cmake
         NAMESPACE Extern::
         DESTINATION lib/cmake/Extern
 )
