@@ -22,7 +22,7 @@ install(EXPORT extern_binary
         DESTINATION lib/cmake/Extern
 )
 
-configure_file(${CMAKE_SOURCE_DIR}/cmake/SUPERBUILD_EXTERNConfig.cmake.in SUPERBUILD_EXTERNConfig.cmake @ONLY)
+configure_file(${CMAKE_SOURCE_DIR}SUPERBUILD_EXTERNConfig.cmake.in SUPERBUILD_EXTERNConfig.cmake @ONLY)
 
 # I think this is what makes sure the Config file is in SUPERBUILD_EXTERN_DIR
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/SUPERBUILD_EXTERNConfig.cmake"
