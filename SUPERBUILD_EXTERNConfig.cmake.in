@@ -1,2 +1,3 @@
 #This seems to be completely unaffected by configure_file (???)
+message("Hello from SUPERBUILD_EXTERNConfig.cmake!")
 include("${CMAKE_CURRENT_LIST_DIR}/SUPERBUILD_EXTERNTargets.cmake")
